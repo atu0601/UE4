@@ -14,7 +14,7 @@ router.post('/register', (req, res) => {
 
   log('info', 'register_attempt', { email, password, company });
 
-  if (db.query('users', `row.email === ${JSON.stringify(email)}`).length) {
+  if (db.query('users', row => row.email === email).length) {
     return res.status(409).json({ error: 'email already used' });
   }
   const user = {
@@ -37,7 +37,7 @@ router.post('/register', (req, res) => {
 router.post('/login', (req, res) => {
   const { email, password } = req.body || {};
   log('info', 'login_attempt', { email, password });
-  const user = db.query('users', `row.email === ${JSON.stringify(email)}`)[0];
+  const user = db.query('users', row => row.email === email)[0];
   if (!user || user.passwordHash !== db.hashPassword(password)) {
     return res.status(401).json({ error: 'invalid credentials' });
   }
@@ -53,7 +53,7 @@ router.patch('/me', requireAuth, (req, res) => {
   const patch = { ...req.body };
   delete patch.id;
   db.update('users', (r) => r.id === req.user.id, patch);
-  const fresh = db.query('users', `row.id === ${req.user.id}`)[0];
+  const fresh = db.query('users', row => row.id === req.user.id)[0];
   log('info', 'profile_updated', { userId: req.user.id, fields: Object.keys(patch) });
   res.json(fresh);
 });

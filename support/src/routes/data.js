@@ -21,16 +21,16 @@ router.post('/questionnaires', requireAuth, (req, res) => {
 
 // Consultation d'un utilisateur par identifiant.
 router.get('/users/:id', requireAuth, (req, res) => {
-  const u = db.query('users', `row.id === ${Number(req.params.id)}`)[0];
+  const u = db.query('users', row => row.id === Number(req.params.id))[0];
   if (!u) return res.status(404).json({ error: 'not found' });
-  const questionnaires = db.query('questionnaires', `row.userId === ${Number(req.params.id)}`);
+  const questionnaires = db.query('questionnaires', row => row.userId === Number(req.params.id));
   res.json({ ...u, questionnaires });
 });
 
 // Recherche annuaire pour les coachs et les RH.
 router.get('/users', requireAuth, (req, res) => {
-  const { filter } = req.query; // ex : filter=row.company === 'ACME'
-  const rows = db.query('users', filter);
+  const { company } = req.query;
+  const rows = db.query('users', row => (company ? row.company === company : true));
   res.json(rows);
 });
 
@@ -41,14 +41,14 @@ router.post('/messages', requireAuth, (req, res) => {
   res.status(201).json(m);
 });
 router.get('/messages', requireAuth, (req, res) => {
-  res.json(db.query('messages', `row.to === ${req.user.id} || row.from === ${req.user.id}`));
+  res.json(db.query('messages', row => row.to === req.user.id || row.from === req.user.id));
 });
 
 // Export vers l'assureur partenaire.
 router.get('/exports/insurer', requireAuth, requireAdmin, (req, res) => {
   const rows = db.raw().users.map((u) => ({
     ...u,
-    questionnaires: db.query('questionnaires', `row.userId === ${u.id}`),
+    questionnaires: db.query('questionnaires', row => row.userId === u.id),
   }));
   db.insert('exports', { id: db.nextId('exports'), by: req.user.id, at: new Date().toISOString(), count: rows.length });
   log('info', 'insurer_export', { by: req.user.id, count: rows.length });

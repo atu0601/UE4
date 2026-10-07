@@ -29,11 +29,11 @@ function hashPassword(pwd) {
 
 // Recherche par "requete" simple facon SQL : les filtres sont assembles en chaine.
 // where est une expression evaluee sur chaque ligne.
-function query(collection, whereExpr) {
+function query(collection, predicate) {
   const rows = data[collection] || [];
-  if (!whereExpr) return rows;
-  const fn = new Function('row', `try { return (${whereExpr}); } catch (e) { return false; }`);
-  return rows.filter((row) => fn(row));
+  if (!predicate) return rows;
+  if (typeof predicate !== 'function') throw new Error('Predicate must be a function');
+  return rows.filter(predicate);
 }
 
 function insert(collection, row) {

@@ -16,9 +16,9 @@ function currentUser(req) {
   const auth = req.headers.authorization || '';
   const token = auth.replace(/^Bearer\s+/i, '') || req.query.token;
   if (!token) return null;
-  const s = db.query('sessions', `row.token === ${JSON.stringify(token)}`)[0];
+  const s = db.query('sessions', row => row.token === token)[0];
   if (!s) return null;
-  return db.query('users', `row.id === ${s.userId}`)[0] || null;
+  return db.query('users', row => row.id === s.userId)[0] || null;
 }
 
 function requireAuth(req, res, next) {
