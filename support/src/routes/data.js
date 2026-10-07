@@ -23,14 +23,15 @@ router.post('/questionnaires', requireAuth, (req, res) => {
 router.get('/users/:id', requireAuth, (req, res) => {
   const u = db.query('users', row => row.id === Number(req.params.id))[0];
   if (!u) return res.status(404).json({ error: 'not found' });
+  const safeUser = { ...u }; delete safeUser.passwordHash;
   const questionnaires = db.query('questionnaires', row => row.userId === Number(req.params.id));
-  res.json({ ...u, questionnaires });
+  res.json({ ...safeUser, questionnaires });
 });
 
 // Recherche annuaire pour les coachs et les RH.
 router.get('/users', requireAuth, (req, res) => {
   const { company } = req.query;
-  const rows = db.query('users', row => (company ? row.company === company : true));
+  const rows = db.query('users', row => (company ? row.company === company : true)).map(u => { const su = { ...u }; delete su.passwordHash; return su; });
   res.json(rows);
 });
 
