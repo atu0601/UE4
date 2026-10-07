@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99af5428-4c5f-4970-ac7e-7cbaf9a24117" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/support/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/support/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/support/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/db/seed.js" beforeDir="false" afterPath="$PROJECT_DIR$/support/db/seed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/db/wellwork.json" beforeDir="false" afterPath="$PROJECT_DIR$/support/db/wellwork.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/support/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/src/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/support/src/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/src/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/support/src/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/src/routes/accounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/support/src/routes/accounts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/support/src/routes/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/support/src/routes/data.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/antoine/Downloads/sujet3-rgpd-agile-etudiants" value="3K1KPP3zJz1OMXof6OHgoO9qI1D" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/support" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "atu0601"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/atu0601/UE4.git",
+    "accountId": "93d64d45-cee4-47ec-8f03-353983799753"
+  }
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3K1KPP3zJz1OMXof6OHgoO9qI1D" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "fix-branch",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "/Users/antoine/Downloads/sujet3-rgpd-agile-etudiants",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3bd3a6803838-JavaScript-WS-261.22158.274" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99af5428-4c5f-4970-ac7e-7cbaf9a24117" name="Changes" comment="" />
+      <created>1790719609376</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790719609376</updated>
+      <workItem from="1790719610402" duration="88350000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1790757374314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1790757374314</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
