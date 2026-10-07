@@ -30,7 +30,7 @@ router.get('/users/:id', requireAuth, (req, res) => {
 
 // Recherche annuaire pour les coachs et les RH.
 router.get('/users', requireAuth, (req, res) => {
-  const { company } = req.query;
+  const company = req.user.role === 'rh' ? req.user.company : req.query.company;
   const rows = db.query('users', row => (company ? row.company === company : true)).map(u => { const su = { ...u }; delete su.passwordHash; return su; });
   res.json(rows);
 });
