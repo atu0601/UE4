@@ -24,13 +24,12 @@ router.post('/register', (req, res) => {
     firstName, lastName, company,
     birthDate,
     role: 'employee',
-    marketingOptIn: true,
+    marketingOptIn: false,
     createdAt: new Date().toISOString(),
     deleted: false,
   };
   db.insert('users', user);
-  db.insert('consents', { id: db.nextId('consents'), userId: user.id, marketing: true, thirdParty: true, at: user.createdAt });
-  const token = issueToken(user);
+    const token = issueToken(user);
   const safeUser = { ...user }; delete safeUser.passwordHash;
   res.status(201).json({ token, user: safeUser });
 });
